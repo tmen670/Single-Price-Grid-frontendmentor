@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght,YOPQ@100..900,40..300&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --color-primary-400: hsl(179, 62%, 43%);
+    --color-primary-300: hsl(71, 73%, 54%);
+    --color-neutral-100: hsl(204, 43%, 93%);
+    --color-neutral-200: hsl(218, 22%, 67%);
+
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+* {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--color-neutral-100);
+}
+
+.container {
+    max-width: 550px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.message-container {
+    background-color: white;
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: #42a7a7;
+    font-weight: var(--fw-700);
+}
+
+.subtitle {
+    color: var(--color-primary-300);
+    font-weight: var(--fw-700);
+}
+
+.description {
+    color: var(--color-neutral-200);
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+}
+
+.flex-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.subscription-container {
+    background-color: var(--color-primary-400);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.subscription-title {
+    color: white;
+}
+
+.pricing-align {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.price {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: var(--fw-700);
+}
+
+.span {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--color-neutral-100);
+}
+
+.price-access {
+    color: white;
+    font-size: 0.875rem;
+}
+
+.sign-up {
+    color: white;
+    background-color: var(--color-primary-300);
+    padding: 1em;
+    font-weight: var(--fw-700);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.sign-up:hover {
+    opacity: 0.75;
+}
+
+.sign-up:active {
+    opacity: 0.5;
+}
+
+.why-container {
+    background-color: #4abebd;
+    padding: 2rem;
+}
+
+.group-space {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.why-title {
+    color: white;
+}
+
+ul {
+    color: var(--color-neutral-100);
+    font-size: 0.75rem;
+    list-style-type: none;
+    padding: 0;
+    line-height: 1rem;
+}
+
+@media (max-width: 425px) {
+
+    body {
+        margin: 3rem 2rem;
+    }
+
+    .flex-row {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+    }
+
+}
